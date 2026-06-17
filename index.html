@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<!-- Refactored as premium True Crew lead magnet: branding tightened, footer deduped, premium upsell hints added. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shift-Proof Field Maintenance Playbook — True Crew</title>
+  <meta name="description" content="Interactive playbook for maintenance supervisors and field leads. Reduce chaos at shift change, eliminate repeat failures, and keep crews aligned — powered by True Crew.">
+  <meta property="og:description" content="Structured end-of-shift handoff for maintenance and operations teams. Job plans, failure tracking, and readiness verification.">
+  <meta name="twitter:description" content="Structured end-of-shift handoff tool for maintenance and operations teams.">
+  <meta property="og:title" content="The Shift-Proof Field Maintenance Playbook — True Crew">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.truecrewllc.com">
+  <meta property="og:image" content="true-crew-logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Shift-Proof Field Maintenance Playbook — True Crew">
+  <link rel="icon" href="true-crew-logo.png" type="image/png">
+  <style>
+    :root {
+      --bg: #141518;
+      --bg-elevated: #1a1b1f;
+      --bg-card: #1e2026;
+      --steel: #9DACC1;
+      --steel-dim: #6b7a8f;
+      --orange: #E4632A;
+      --orange-dim: #b84e22;
+      --white: #f0f2f5;
+      --text-muted: #8a929e;
+      --border: rgba(157, 172, 193, 0.18);
+      --green: #3d9e6a;
+      --yellow: #c9a227;
+      --red: #c94444;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    .prose { max-width: 62ch; }
+
+    /* Top bar */
+    .topbar {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-topbar {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .hero-logo-wrap {
+      margin-bottom: 20px;
+    }
+
+    .logo-hero {
+      height: 88px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      color: var(--steel-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    /* Hero */
+    .hero {
+      padding: 48px 0 40px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(157, 172, 193, 0.04) 0%, transparent 100%);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      max-width: 18ch;
+    }
+
+    .hero-sub {
+      color: var(--steel);
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      font-weight: 500;
+      margin-bottom: 12px;
+      max-width: 42ch;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      max-width: 52ch;
+      margin-bottom: 24px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn-cta-primary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-cta-primary:hover { background: var(--orange-dim); }
+
+    .btn-cta-secondary {
+      display: inline-block;
+      padding: 13px 24px;
+      background: transparent;
+      color: var(--steel);
+      font-family: var(--font);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-cta-secondary:hover { border-color: var(--steel); color: var(--white); }
+
+    .playbook-intro {
+      margin-top: 8px;
+      padding: 20px 22px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+    }
+
+    .playbook-intro h2 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+
+    .playbook-intro p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .playbook-intro p:last-child { margin-bottom: 0; }
+
+    .playbook-flow {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      font-size: 0.8125rem;
+      color: var(--steel);
+    }
+
+    .playbook-flow li strong { color: var(--white); }
+
+    /* How to use */
+    .how-to {
+      margin: 28px 0 0;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+
+    .how-to-toggle {
+      width: 100%;
+      text-align: left;
+      padding: 14px 18px;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+
+    .how-to-toggle:hover { background: rgba(157, 172, 193, 0.04); }
+
+    .how-to-toggle .icon { color: var(--orange); font-size: 1.1rem; transition: transform 0.2s; }
+    .how-to-toggle.open .icon { transform: rotate(180deg); }
+
+    .how-to-body {
+      display: none;
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .how-to-body.open { display: block; }
+
+    .how-steps {
+      list-style: none;
+      counter-reset: how;
+      margin-top: 16px;
+    }
+
+    .how-steps li {
+      counter-increment: how;
+      position: relative;
+      padding: 10px 0 10px 36px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .how-steps li:last-child { border-bottom: none; }
+    .how-steps li strong { color: var(--white); }
+
+    .how-steps li::before {
+      content: counter(how);
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: var(--orange);
+      border: 1px solid var(--border);
+    }
+
+    /* Tool sections */
+    .tool-section {
+      padding: 44px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .tool-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(157, 172, 193, 0.2), transparent);
+    }
+
+    .tool-section.capstone {
+      padding-bottom: 48px;
+      border-bottom: none;
+    }
+
+    .tool-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tool-num {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .tool-header h2 {
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .section-intro {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      max-width: 58ch;
+    }
+
+    .tool-blurb {
+      font-size: 0.8125rem;
+      color: var(--steel-dim);
+      margin-bottom: 18px;
+      max-width: 58ch;
+    }
+
+    .pro-tip {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: rgba(228, 99, 42, 0.06);
+      border: 1px solid rgba(228, 99, 42, 0.22);
+      border-left: 3px solid var(--orange);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      max-width: 58ch;
+    }
+
+    .pro-tip-label {
+      display: block;
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+
+    .upgrade-blurb {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      max-width: 58ch;
+    }
+
+    .upgrade-blurb strong {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 6px;
+    }
+
+    .upgrade-blurb a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .upgrade-blurb a:hover { text-decoration: underline; }
+
+    .premium-section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+
+    .premium-section h2 {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .premium-section .premium-lead {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      max-width: 52ch;
+    }
+
+    .premium-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .premium-list li {
+      position: relative;
+      padding: 10px 0 10px 22px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .premium-list li:last-child { border-bottom: none; }
+
+    .premium-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    .premium-list li strong { color: var(--white); }
+
+    .tool-panel {
+      padding: 22px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+    }
+
+    .tool-panel h3 {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--steel);
+      margin-bottom: 16px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .form-group { margin-bottom: 14px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--steel);
+      margin-bottom: 5px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 9px 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 0.875rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--steel);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 64px; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-family: var(--font);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .btn-primary { background: var(--orange); color: var(--white); }
+    .btn-primary:hover { background: var(--orange-dim); }
+    .btn-primary:disabled { background: var(--steel-dim); cursor: not-allowed; opacity: 0.55; }
+    .btn-primary:disabled:hover { background: var(--steel-dim); }
+
+    .field-hint {
+      font-size: 0.6875rem;
+      color: var(--steel-dim);
+      margin-top: 4px;
+    }
+
+    .gate-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    .gate-note a { color: var(--orange); text-decoration: none; }
+    .gate-note a:hover { text-decoration: underline; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--steel);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover { border-color: var(--steel); color: var(--white); }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+
+    .error-msg {
+      display: none;
+      padding: 10px 14px;
+      margin-top: 10px;
+      background: rgba(201, 68, 68, 0.12);
+      border: 1px solid rgba(201, 68, 68, 0.3);
+      color: #e8a0a0;
+      font-size: 0.8125rem;
+    }
+
+    .error-msg.visible { display: block; }
+
+    .tip-inline {
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: var(--bg);
+      border-left: 2px solid var(--steel);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .tip-inline em { color: var(--steel); font-style: normal; }
+
+    /* Job plan output */
+    .job-plan-output {
+      display: none;
+      margin-top: 18px;
+      padding: 20px;
+      background: var(--bg);
+      border: 1px solid var(--steel);
+    }
+
+    .job-plan-output.visible { display: block; }
+
+    .job-plan-output h4 {
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 14px;
+    }
+
+    .plan-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .plan-field { margin-bottom: 12px; }
+
+    .plan-field .plan-label {
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 2px;
+    }
+
+    .plan-field .plan-value { font-size: 0.875rem; }
+
+    .saved-badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+      border: 1px solid rgba(61, 158, 106, 0.4);
+      background: rgba(61, 158, 106, 0.08);
+    }
+
+    .saved-plans-list {
+      margin-top: 16px;
+    }
+
+    .saved-plans-list h4 {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+      margin-bottom: 8px;
+    }
+
+    .saved-plan-item {
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .saved-plan-item strong { color: var(--white); }
+
+    /* Scorecard */
+    .scorecard-items { list-style: none; }
+
+    .scorecard-items li { margin-bottom: 10px; }
+
+    .scorecard-items label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .scorecard-items label:hover { color: var(--white); }
+
+    .scorecard-items input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      accent-color: var(--orange);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .score-result {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-left: 3px solid;
+    }
+
+    .score-result.visible { display: block; }
+    .score-result.green { background: rgba(61, 158, 106, 0.1); border-color: var(--green); }
+    .score-result.yellow { background: rgba(201, 162, 39, 0.1); border-color: var(--yellow); }
+    .score-result.red { background: rgba(201, 68, 68, 0.1); border-color: var(--red); }
+
+    .score-result .status-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .score-result.green .status-label { color: var(--green); }
+    .score-result.yellow .status-label { color: var(--yellow); }
+    .score-result.red .status-label { color: var(--red); }
+
+    .score-result .status-text { font-size: 0.875rem; }
+    .score-result .score-count { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* Repeat failure */
+    .repeat-warning {
+      display: none;
+      padding: 12px 16px;
+      margin-top: 12px;
+      background: rgba(201, 68, 68, 0.15);
+      border: 1px solid var(--red);
+      color: #f0c0c0;
+      font-weight: 600;
+      font-size: 0.8125rem;
+    }
+
+    .repeat-warning.visible { display: block; }
+
+    .failure-log { margin-top: 18px; }
+
+    .failure-log h4 {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+      margin-bottom: 8px;
+    }
+
+    .failure-log-empty { font-size: 0.8125rem; color: var(--steel-dim); font-style: italic; }
+
+    .log-entry {
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+
+    .log-entry.repeat-flag { border-color: var(--red); background: rgba(201, 68, 68, 0.06); }
+
+    .log-entry .log-meta { font-size: 0.6875rem; color: var(--steel-dim); margin-bottom: 3px; }
+
+    .log-entry .log-flag {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 2px 7px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.625rem;
+      font-weight: 700;
+    }
+
+    /* Shift script */
+    .script-steps { list-style: none; margin-top: 14px; }
+
+    .script-steps li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .script-steps li:last-child { border-bottom: none; }
+
+    .script-step-label {
+      display: flex;
+      gap: 12px;
+      padding: 14px 4px;
+      align-items: flex-start;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .script-step-label:hover { background: rgba(157, 172, 193, 0.04); }
+
+    .script-steps .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--orange);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .script-steps .step-content strong {
+      display: block;
+      font-size: 0.875rem;
+      margin-bottom: 2px;
+    }
+
+    .script-steps .step-content span { font-size: 0.8125rem; color: var(--text-muted); }
+
+    .script-steps .step-check-input {
+      margin-left: auto;
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+
+    .scorecard-na {
+      margin-top: 4px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .scorecard-na label {
+      font-size: 0.8125rem;
+      color: var(--steel-dim);
+    }
+
+    .footer-contact {
+      margin-bottom: 12px;
+      font-size: 0.8125rem;
+    }
+
+    .footer-contact a {
+      color: var(--steel);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-contact a:hover { color: var(--orange); }
+
+    .copy-error {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: var(--red);
+    }
+
+    .copy-error.visible { display: block; }
+
+    /* Passdown output */
+    .passdown-output {
+      display: none;
+      margin-top: 20px;
+      padding: 28px;
+      background: var(--bg);
+      border: 2px solid var(--steel);
+    }
+
+    .passdown-output.visible { display: block; }
+
+    .passdown-output .pd-header {
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .passdown-output .pd-brand {
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 8px;
+    }
+
+    .passdown-output .pd-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .passdown-output .pd-meta {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .passdown-output .pd-section {
+      margin-bottom: 20px;
+    }
+
+    .passdown-output .pd-section:last-child { margin-bottom: 0; }
+
+    .passdown-output .pd-section-title {
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .passdown-output .pd-content {
+      font-size: 0.875rem;
+      color: var(--white);
+      white-space: pre-wrap;
+    }
+
+    .passdown-output .pd-empty {
+      color: var(--steel-dim);
+      font-style: italic;
+    }
+
+    .passdown-output .pd-job {
+      padding: 12px;
+      margin-bottom: 8px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+    }
+
+    .passdown-output .pd-job-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .passdown-output .pd-job-row {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .passdown-output .pd-job-row strong { color: var(--steel); }
+
+    .passdown-output .pd-flag {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-top: 6px;
+    }
+
+    .passdown-output .pd-flag.repeat { background: var(--red); color: white; }
+    .passdown-output .pd-flag.ready { background: var(--green); color: white; }
+    .passdown-output .pd-flag.warn { background: var(--yellow); color: #141518; }
+
+    .passdown-output .pd-footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.6875rem;
+      color: var(--steel-dim);
+      text-align: center;
+    }
+
+    .copy-success {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: var(--green);
+    }
+
+    .copy-success.visible { display: block; }
+
+    /* Footer upsell */
+    footer {
+      padding: 40px 0 48px;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    footer .footer-logo {
+      height: 36px;
+      width: auto;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-nav a {
+      font-size: 0.8125rem;
+      color: var(--steel);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: var(--orange); }
+
+    footer p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      max-width: 52ch;
+    }
+
+    footer a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    footer .footer-trust {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: var(--steel-dim);
+      letter-spacing: 0.04em;
+    }
+
+    @media print {
+      .topbar, .hero, .how-to, .playbook-intro, .pro-tip, .upgrade-blurb, .premium-section, footer, .btn-group, .error-msg, .copy-success, .hero-cta-group, .section-intro { display: none !important; }
+      .tool-section:not(.capstone) { display: none !important; }
+      .tool-section.capstone { padding: 0; }
+      .tool-panel { border: none; padding: 0; }
+      .tool-header, .tool-blurb, .form-group, #passdown-form-fields { display: none !important; }
+      .passdown-output { display: block !important; border: none; padding: 0; }
+      body { background: white; color: black; }
+      .passdown-output .pd-content, .passdown-output .pd-title, .passdown-output .pd-job-title { color: black; }
+      .passdown-output .pd-job-row { color: #333; }
+    }
+
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <a href="https://www.truecrewllc.com" class="brand-link" target="_blank" rel="noopener">
+        <img src="true-crew-logo.png" alt="True Crew" class="logo-topbar" width="120" height="40">
+      </a>
+      <nav class="nav-links" aria-label="Playbook sections">
+        <a href="#orientation">Start</a>
+        <a href="#job-plan">Job Plan</a>
+        <a href="#failures">Failures</a>
+        <a href="#scorecard">Scorecard</a>
+        <a href="#passdown">Passdown</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-logo-wrap">
+        <img src="true-crew-logo.png" alt="True Crew" class="logo-hero" width="220" height="88">
+      </div>
+      <p class="hero-eyebrow" style="font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);margin-bottom:12px;">True Crew · Operations &amp; Maintenance Playbook</p>
+      <h1>The Shift-Proof Field Maintenance Playbook</h1>
+      <p class="hero-sub">Reduce chaos at shift change, eliminate repeat failures, and keep crews aligned on what matters most.</p>
+      <p class="hero-desc prose">True Crew is a battle-tested O&amp;M command center for field service and industrial maintenance teams. Use this interactive guide to run a complete shift cycle — orientation through passdown — with the same rigor your operation demands.</p>
+      <div class="hero-cta-group">
+        <a href="https://www.truecrewllc.com?utm_source=shift-passdown&amp;utm_medium=tool&amp;utm_campaign=lead-magnet" class="btn-cta-primary" target="_blank" rel="noopener">Try True Crew</a>
+        <a href="#orientation" class="btn-cta-secondary">Start the Playbook</a>
+      </div>
+
+      <div class="playbook-intro">
+        <h2>How the system works</h2>
+        <p>Five connected steps form a repeatable shift workflow. Complete each section in order during the shift; data flows into your end-of-shift passdown automatically.</p>
+        <ul class="playbook-flow">
+          <li><strong>01 First 15 Minutes</strong> — Orient the incoming crew on scope, risk, and priorities.</li>
+          <li><strong>02 Shift-Resilient Job Plan</strong> — Document active work so it survives crew changes.</li>
+          <li><strong>03 Repeat Failure Log</strong> — Track asset failures and flag repeats within 30 days.</li>
+          <li><strong>04 Handoff Readiness Scorecard</strong> — Confirm the shift is ready before handoff.</li>
+          <li><strong>05 Generate Shift Passdown</strong> — Compile everything into one handoff document.</li>
+        </ul>
+      </div>
+
+      <div class="how-to">
+        <button type="button" class="how-to-toggle" id="how-to-toggle" aria-expanded="false">
+          <span>How to use this tool</span>
+          <span class="icon">▼</span>
+        </button>
+        <div class="how-to-body" id="how-to-body">
+          <ol class="how-steps">
+            <li><strong>Start of shift</strong> — Complete the First 15 Minutes orientation. Confirm isolations, inspect priority assets, and review open job packs.</li>
+            <li><strong>During shift</strong> — Record Shift-Resilient Job Plans for active work. Log failures by asset ID; repeat events are flagged automatically.</li>
+            <li><strong>Before handoff</strong> — Complete the Handoff Readiness Scorecard. All required items, including inspection or justified N/A, must be marked complete.</li>
+            <li><strong>End of shift</strong> — Supervisor name and shift are pre-filled from Section 01. Generate the passdown, then print or copy for the incoming crew.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Tool 1: First 15 Minutes -->
+    <section class="tool-section" id="orientation">
+      <div class="tool-header">
+        <span class="tool-num">01</span>
+        <h2>First 15 Minutes</h2>
+      </div>
+      <p class="section-intro">Step 1 of 5 — Establishes shared situational awareness before work begins. Sets the foundation for every subsequent section in this playbook.</p>
+      <p class="tool-blurb">Conduct an incoming shift orientation using the checks below, in sequence, to align the crew on work scope, risks, and priorities.</p>
+      <div class="tool-panel">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ss-shift">Shift Type</label>
+            <select id="ss-shift">
+              <option value="">Select…</option>
+              <option value="Day">Day</option>
+              <option value="Night">Night</option>
+              <option value="Swing">Swing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ss-supervisor">Supervisor Name</label>
+            <input type="text" id="ss-supervisor" placeholder="Supervisor or lead technician">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ss-priorities">Top Priorities from Outgoing Shift</label>
+          <textarea id="ss-priorities" rows="2" placeholder="1. Pump rebuild Unit 4&#10;2. Conveyor drive follow-up"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="ss-jobpacks">Open Job Packs</label>
+          <textarea id="ss-jobpacks" rows="2" placeholder="WO-8821 — mid-task, next step assigned"></textarea>
+        </div>
+        <ol class="script-steps">
+          <li>
+            <label class="script-step-label">
+              <span class="step-num">1</span>
+              <div class="step-content"><strong>Review the shift handover.</strong><span>Confirm status, priorities, and open safety items before crew discussion.</span></div>
+              <input type="checkbox" class="orient-check step-check-input" aria-label="Step 1 complete">
+            </label>
+          </li>
+          <li>
+            <label class="script-step-label">
+              <span class="step-num">2</span>
+              <div class="step-content"><strong>Confirm active isolations and permits.</strong><span>Verify current status; do not rely on documentation alone.</span></div>
+              <input type="checkbox" class="orient-check step-check-input" aria-label="Step 2 complete">
+            </label>
+          </li>
+          <li>
+            <label class="script-step-label">
+              <span class="step-num">3</span>
+              <div class="step-content"><strong>Inspect the highest-priority asset.</strong><span>Conduct a brief field inspection before relying on written notes.</span></div>
+              <input type="checkbox" class="orient-check step-check-input" aria-label="Step 3 complete">
+            </label>
+          </li>
+          <li>
+            <label class="script-step-label">
+              <span class="step-num">4</span>
+              <div class="step-content"><strong>Review open job packs.</strong><span>Confirm in-progress work has a defined next step assigned for this shift.</span></div>
+              <input type="checkbox" class="orient-check step-check-input" aria-label="Step 4 complete">
+            </label>
+          </li>
+          <li>
+            <label class="script-step-label">
+              <span class="step-num">5</span>
+              <div class="step-content"><strong>Communicate shift priorities to the crew.</strong><span>State the top one to two priorities before work begins.</span></div>
+              <input type="checkbox" class="orient-check step-check-input" aria-label="Step 5 complete">
+            </label>
+          </li>
+        </ol>
+      </div>
+      <div class="pro-tip">
+        <span class="pro-tip-label">Pro Tip · True Crew Premium</span>
+        Supervisor dashboards surface open job packs, isolations, and crew priorities across multiple sites — so orientation starts with current data, not stale notes.
+      </div>
+    </section>
+
+    <!-- Tool 2: Job Plan -->
+    <section class="tool-section" id="job-plan">
+      <div class="tool-header">
+        <span class="tool-num">02</span>
+        <h2>Shift-Resilient Job Plan</h2>
+      </div>
+      <p class="section-intro">Step 2 of 5 — Captures job state in a format the next shift can execute without re-discovery. Each saved plan rolls into your passdown.</p>
+      <p class="tool-blurb">Complete the fields below to document the job in a way that can continue across shift changes. Entries are saved automatically and included in the end-of-shift passdown.</p>
+      <div class="tool-panel">
+        <form id="job-plan-form" novalidate>
+          <div class="form-group">
+            <label for="jp-fault">Fault / Task</label>
+            <input type="text" id="jp-fault" placeholder="Specific fault or task description">
+          </div>
+          <div class="form-group">
+            <label for="jp-parts">Parts and Tools</label>
+            <input type="text" id="jp-parts" placeholder="Parts and tools confirmed on site">
+          </div>
+          <div class="form-group">
+            <label for="jp-safety">Safety / Isolation</label>
+            <input type="text" id="jp-safety" placeholder="Active, pending, or not required">
+          </div>
+          <div class="form-group">
+            <label for="jp-completed">Steps Completed</label>
+            <input type="text" id="jp-completed" placeholder="Work completed to date">
+          </div>
+          <div class="form-group">
+            <label for="jp-next">Next Step</label>
+            <input type="text" id="jp-next" placeholder="Specific instruction for the next technician">
+          </div>
+          <button type="submit" class="btn btn-primary">Save Job Plan</button>
+          <div class="error-msg" id="job-plan-error">All five fields are required before saving.</div>
+        </form>
+        <div class="job-plan-output" id="job-plan-output">
+          <h4>Preview</h4>
+          <div class="plan-title" id="plan-title"></div>
+          <div class="plan-field"><div class="plan-label">Fault / Task</div><div class="plan-value" id="plan-fault"></div></div>
+          <div class="plan-field"><div class="plan-label">Parts and Tools</div><div class="plan-value" id="plan-parts"></div></div>
+          <div class="plan-field"><div class="plan-label">Safety / Isolation</div><div class="plan-value" id="plan-safety"></div></div>
+          <div class="plan-field"><div class="plan-label">Steps Completed</div><div class="plan-value" id="plan-completed"></div></div>
+          <div class="plan-field"><div class="plan-label">Next Step</div><div class="plan-value" id="plan-next"></div></div>
+          <span class="saved-badge">Included in end-of-shift passdown</span>
+        </div>
+        <div class="saved-plans-list" id="saved-plans-list" style="display:none;">
+          <h4>Included in End-of-Shift Passdown (<span id="plan-count">0</span>)</h4>
+          <div id="saved-plans-items"></div>
+        </div>
+      </div>
+      <div class="pro-tip">
+        <span class="pro-tip-label">Pro Tip · True Crew Premium</span>
+        Job plan templates auto-save across shifts and crews — standardize your five-field structure once, then deploy it fleet-wide without retyping.
+      </div>
+    </section>
+
+    <!-- Tool 3: Repeat Failures -->
+    <section class="tool-section" id="failures">
+      <div class="tool-header">
+        <span class="tool-num">03</span>
+        <h2>Repeat Failure Log</h2>
+      </div>
+      <p class="section-intro">Step 3 of 5 — Links failures to assets so patterns surface before they become downtime. Repeat events within 30 days are flagged automatically.</p>
+      <p class="tool-blurb">Record events against the asset ID. If the same failure occurs again within 30 days, it is flagged as a repeat to support analysis and decision-making.</p>
+      <div class="tool-panel">
+        <form id="failure-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-asset">Asset ID</label>
+              <input type="text" id="rf-asset" placeholder="HT-014">
+            </div>
+            <div class="form-group">
+              <label for="rf-date">Date</label>
+              <input type="date" id="rf-date">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rf-failure">Failure Description</label>
+            <input type="text" id="rf-failure" placeholder="Hydraulic fitting leak, left rear cylinder">
+          </div>
+          <div class="form-group">
+            <label for="rf-cause">Cause and Corrective Action</label>
+            <input type="text" id="rf-cause" placeholder="Cause: worn O-ring. Action: replaced and verified torque">
+          </div>
+          <button type="submit" class="btn btn-primary">Log Failure</button>
+          <div class="error-msg" id="failure-error">All fields are required.</div>
+          <div class="repeat-warning" id="repeat-warning">REPEAT FAILURE FLAGGED — This asset recorded a similar failure within 30 days. Conduct root cause review before closeout.</div>
+        </form>
+        <div class="tip-inline">Each entry should clearly state both the identified cause and the corrective action taken. Avoid generic descriptions such as "fixed" to ensure the information is actionable for subsequent shifts.</div>
+        <div class="failure-log">
+          <h4>This Shift (<span id="failure-count">0</span>)</h4>
+          <div id="failure-log-entries"><p class="failure-log-empty">No repeat failures have been recorded during this shift.</p></div>
+        </div>
+      </div>
+      <div class="upgrade-blurb">
+        <strong>Upgrade benefit</strong>
+        True Crew Premium adds automatic repeat-failure detection, asset history timelines, and reporting — so patterns are visible across shifts without manual cross-checking.
+        <a href="https://www.truecrewllc.com?utm_source=shift-passdown&amp;utm_medium=tool&amp;utm_campaign=lead-magnet" target="_blank" rel="noopener">See repeat-failure analytics →</a>
+      </div>
+    </section>
+
+    <!-- Tool 4: Scorecard -->
+    <section class="tool-section" id="scorecard">
+      <div class="tool-header">
+        <span class="tool-num">04</span>
+        <h2>Handoff Readiness Scorecard</h2>
+      </div>
+      <p class="section-intro">Step 4 of 5 — Final quality gate before handoff. One scorecard per passdown; all required items must be complete before generation is enabled.</p>
+      <p class="tool-blurb">Use this scorecard as the final confirmation that the shift is ready for handoff. One scorecard is completed for each passdown. All required items, including the inspection (or a justified N/A), must be marked complete before the passdown can be generated.</p>
+      <div class="tool-panel">
+        <ul class="scorecard-items">
+          <li><label><input type="checkbox" class="score-check score-core">Fault or task is described specifically</label></li>
+          <li><label><input type="checkbox" class="score-check score-core">Parts and tools are confirmed on site</label></li>
+          <li><label><input type="checkbox" class="score-check score-core">Safety and isolation status is current and verified</label></li>
+          <li><label><input type="checkbox" class="score-check score-core">Steps completed are documented</label></li>
+          <li><label><input type="checkbox" class="score-check score-core">Next step is written as a clear instruction</label></li>
+          <li><label><input type="checkbox" class="score-check" id="score-inspection">Inspection checklist is attached and complete</label></li>
+          <li class="scorecard-na"><label><input type="checkbox" id="score-inspection-na">N/A — no inspection required for this job</label></li>
+        </ul>
+        <div class="score-result" id="score-result">
+          <div class="status-label" id="score-status-label"></div>
+          <div class="status-text" id="score-status-text"></div>
+          <div class="score-count" id="score-count"></div>
+        </div>
+      </div>
+      <div class="upgrade-blurb">
+        <strong>Upgrade benefit</strong>
+        Premium auto-generates passdown emails, stores every handoff in searchable history, and alerts supervisors when scorecard items fail — before the crew walks out the door.
+        <a href="https://www.truecrewllc.com?utm_source=shift-passdown&amp;utm_medium=tool&amp;utm_campaign=lead-magnet" target="_blank" rel="noopener">Explore automated passdowns →</a>
+      </div>
+    </section>
+
+    <!-- Tool 5: Generate Passdown -->
+    <section class="tool-section capstone" id="passdown">
+      <div class="tool-header">
+        <span class="tool-num">05</span>
+        <h2>Generate Shift Passdown</h2>
+      </div>
+      <p class="section-intro">Step 5 of 5 — Compiles orientation notes, job plans, failures, and scorecard status into one end-of-shift document for the incoming crew.</p>
+      <p class="tool-blurb">Compile the information from your job plans, repeat failure log, and Handoff Readiness Scorecard into a single end-of-shift passdown. You can print the passdown or copy it into an email or digital log for the incoming crew.</p>
+      <div class="tool-panel">
+        <div id="passdown-form-fields">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pd-outgoing">Outgoing Supervisor</label>
+              <input type="text" id="pd-outgoing" placeholder="Supervisor name">
+              <p class="field-hint">Pre-filled from Section 01 (Supervisor Name). You may edit this value before generating the passdown.</p>
+            </div>
+            <div class="form-group">
+              <label for="pd-shift">Shift Ending</label>
+              <select id="pd-shift">
+                <option value="">Select…</option>
+                <option value="Day">Day</option>
+                <option value="Night">Night</option>
+                <option value="Swing">Swing</option>
+              </select>
+              <p class="field-hint">Pre-filled from Section 01 (Shift Type) when available.</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pd-date">Date</label>
+              <input type="date" id="pd-date">
+            </div>
+            <div class="form-group">
+              <label for="pd-time">End Time</label>
+              <input type="time" id="pd-time">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pd-priorities">Top Priorities for Incoming Shift</label>
+            <textarea id="pd-priorities" rows="2" placeholder="What must the next shift tackle first?"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="pd-safety">Active Isolations / Safety Items</label>
+            <textarea id="pd-safety" rows="2" placeholder="LOTO status, open permits, hazards to watch"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="pd-watch">Watch List / Notes</label>
+            <textarea id="pd-watch" rows="2" placeholder="Assets running hot, parts on order, follow-ups needed"></textarea>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="generate-passdown" disabled>Generate Shift Passdown</button>
+          </div>
+          <p class="gate-note" id="gate-note">The Handoff Readiness Scorecard must be complete before a passdown can be generated. <a href="#scorecard">Complete the scorecard</a></p>
+          <div class="error-msg" id="passdown-error"></div>
+        </div>
+
+        <div class="passdown-output" id="passdown-output">
+          <div class="pd-header">
+            <div class="pd-brand">True Crew · Shift Passdown</div>
+            <div class="pd-title">End-of-Shift Handoff</div>
+            <div class="pd-meta" id="pd-meta"></div>
+          </div>
+          <div id="pd-body"></div>
+          <div class="pd-footer">Shift passdown document · True Crew · www.truecrewllc.com</div>
+        </div>
+
+        <div class="btn-group" id="passdown-actions" style="display:none; margin-top:16px;">
+          <button type="button" class="btn btn-secondary" id="print-passdown">Print Passdown</button>
+          <button type="button" class="btn btn-secondary" id="copy-passdown">Copy to Clipboard</button>
+        </div>
+        <p class="copy-success" id="copy-success">Passdown copied to clipboard.</p>
+        <p class="copy-error" id="copy-error">Copy unsuccessful. Please use "Print Passdown" or manually select and copy the text.</p>
+      </div>
+      <div class="upgrade-blurb">
+        <strong>Upgrade benefit</strong>
+        Export passdowns to PDF, push to your CMMS or email distribution lists, and run multi-site reporting from a single True Crew dashboard.
+        <a href="https://www.truecrewllc.com?utm_source=shift-passdown&amp;utm_medium=tool&amp;utm_campaign=lead-magnet" target="_blank" rel="noopener">Unlock exports &amp; integrations →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="premium-section" id="premium">
+    <div class="container">
+      <h2>What You Unlock in True Crew Premium</h2>
+      <p class="premium-lead">This playbook runs free in your browser. True Crew Premium extends the same workflow with persistence, automation, and visibility across crews and sites.</p>
+      <ul class="premium-list">
+        <li><strong>Shift-to-shift continuity</strong> — Auto-passdown generation, delivery, and archived handoff history searchable by asset, crew, or date.</li>
+        <li><strong>Repeat failure analytics</strong> — Asset-level pattern detection, trend reporting, and recommended corrective actions.</li>
+        <li><strong>Centralized job plans</strong> — Shared templates and live job packs that update across every shift without re-entry.</li>
+        <li><strong>Supervisor command center</strong> — Multi-crew and multi-site dashboards with exception-based alerts on scorecard failures and open isolations.</li>
+        <li><strong>Integration-ready exports</strong> — PDF passdowns, structured data exports, and connectivity with existing maintenance systems.</li>
+      </ul>
+      <a href="https://www.truecrewllc.com?utm_source=shift-passdown&amp;utm_medium=tool&amp;utm_campaign=lead-magnet" class="btn-cta-primary" target="_blank" rel="noopener">Unlock Premium Workflow Automation</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <img src="true-crew-logo.png" alt="True Crew" class="footer-logo" width="100" height="36">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="https://www.truecrewllc.com">Home</a>
+        <a href="https://www.truecrewllc.com?utm_source=shift-passdown&amp;utm_medium=footer&amp;utm_campaign=lead-magnet">Product &amp; Plans</a>
+        <a href="mailto:contact@truecrewllc.com">Contact</a>
+        <a href="https://true-crew.beehiiv.com/">Email Preferences</a>
+      </nav>
+      <p class="prose">This interactive playbook runs locally in your browser. Session data is not retained after the tab is closed.</p>
+      <p class="prose">To receive additional tools, templates, and updates for operations and maintenance leaders, visit the <a href="https://true-crew.beehiiv.com/" target="_blank" rel="noopener">True Crew newsletter</a>.</p>
+      <p class="footer-trust">True Crew · Built by operators for operators.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      /* ── Shared in-memory state ── */
+      var state = {
+        jobPlans: [],
+        failureLog: [],
+        scorecard: { checked: 0, status: 'red', label: '', text: '' }
+      };
+
+      function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      function val(id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      }
+
+      function localDateString() {
+        var d = new Date();
+        return d.getFullYear() + '-' +
+          String(d.getMonth() + 1).padStart(2, '0') + '-' +
+          String(d.getDate()).padStart(2, '0');
+      }
+
+      function hasSessionData() {
+        if (state.jobPlans.length || state.failureLog.length) return true;
+        if (document.querySelectorAll('.score-core:checked, #score-inspection:checked, #score-inspection-na:checked').length) return true;
+        if (document.querySelectorAll('.orient-check:checked').length) return true;
+        var fields = ['ss-supervisor', 'ss-priorities', 'ss-jobpacks', 'pd-outgoing', 'pd-priorities', 'pd-safety', 'pd-watch'];
+        for (var i = 0; i < fields.length; i++) {
+          if (val(fields[i])) return true;
+        }
+        return false;
+      }
+
+      window.addEventListener('beforeunload', function (e) {
+        if (hasSessionData()) {
+          e.preventDefault();
+          e.returnValue = '';
+        }
+      });
+
+      /* ── How to use toggle ── */
+      var howToggle = document.getElementById('how-to-toggle');
+      var howBody = document.getElementById('how-to-body');
+      howToggle.addEventListener('click', function () {
+        var open = howBody.classList.toggle('open');
+        howToggle.classList.toggle('open', open);
+        howToggle.setAttribute('aria-expanded', open);
+      });
+
+      /* ── Job Plan ── */
+      var jobPlanForm = document.getElementById('job-plan-form');
+      var jobPlanError = document.getElementById('job-plan-error');
+      var jobPlanOutput = document.getElementById('job-plan-output');
+
+      function renderSavedPlans() {
+        var list = document.getElementById('saved-plans-list');
+        var items = document.getElementById('saved-plans-items');
+        var count = document.getElementById('plan-count');
+        if (state.jobPlans.length === 0) {
+          list.style.display = 'none';
+          return;
+        }
+        list.style.display = 'block';
+        count.textContent = state.jobPlans.length;
+        var html = '';
+        state.jobPlans.forEach(function (p, i) {
+          html += '<div class="saved-plan-item"><strong>' + escapeHtml(p.fault) + '</strong> — Next: ' + escapeHtml(p.next) + '</div>';
+        });
+        items.innerHTML = html;
+      }
+
+      jobPlanForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var plan = {
+          fault: val('jp-fault'),
+          parts: val('jp-parts'),
+          safety: val('jp-safety'),
+          completed: val('jp-completed'),
+          next: val('jp-next')
+        };
+        if (!plan.fault || !plan.parts || !plan.safety || !plan.completed || !plan.next) {
+          jobPlanError.classList.add('visible');
+          jobPlanOutput.classList.remove('visible');
+          return;
+        }
+        jobPlanError.classList.remove('visible');
+        state.jobPlans.push(plan);
+        document.getElementById('plan-title').textContent = plan.fault;
+        document.getElementById('plan-fault').textContent = plan.fault;
+        document.getElementById('plan-parts').textContent = plan.parts;
+        document.getElementById('plan-safety').textContent = plan.safety;
+        document.getElementById('plan-completed').textContent = plan.completed;
+        document.getElementById('plan-next').textContent = plan.next;
+        jobPlanOutput.classList.add('visible');
+        renderSavedPlans();
+        jobPlanForm.reset();
+      });
+
+      /* ── Scorecard ── */
+      var scoreCoreChecks = document.querySelectorAll('.score-core');
+      var scoreInspection = document.getElementById('score-inspection');
+      var scoreInspectionNa = document.getElementById('score-inspection-na');
+      var scoreResult = document.getElementById('score-result');
+
+      scoreInspection.addEventListener('change', function () {
+        if (this.checked) scoreInspectionNa.checked = false;
+        updateScorecard();
+      });
+
+      scoreInspectionNa.addEventListener('change', function () {
+        if (this.checked) scoreInspection.checked = false;
+        updateScorecard();
+      });
+
+      function updateScorecard() {
+        var coreChecked = 0;
+        scoreCoreChecks.forEach(function (cb) { if (cb.checked) coreChecked++; });
+        var inspectionDone = scoreInspection.checked || scoreInspectionNa.checked;
+        var totalChecked = coreChecked + (inspectionDone ? 1 : 0);
+
+        scoreResult.classList.remove('green', 'yellow', 'red');
+        scoreResult.classList.add('visible');
+
+        var label, text, status;
+        if (coreChecked === 5 && inspectionDone) {
+          status = 'green';
+          label = 'Green — Ready for Handoff';
+          text = 'All required handoff criteria are met.';
+        } else if (totalChecked >= 4) {
+          status = 'yellow';
+          label = 'Yellow — Correct Before Shift Change';
+          text = 'Address outstanding items before shift change.';
+        } else {
+          status = 'red';
+          label = 'Red — Handoff Not Authorized';
+          text = 'Complete safety and task documentation before handoff.';
+        }
+
+        scoreResult.classList.add(status);
+        document.getElementById('score-status-label').textContent = label;
+        document.getElementById('score-status-text').textContent = text;
+        var inspectionNote = scoreInspectionNa.checked ? ' (inspection N/A)' : '';
+        document.getElementById('score-count').textContent = totalChecked + ' / 6 checked' + inspectionNote;
+
+        state.scorecard = { checked: totalChecked, status: status, label: label, text: text };
+        updatePassdownGate();
+      }
+
+      scoreCoreChecks.forEach(function (cb) { cb.addEventListener('change', updateScorecard); });
+      updateScorecard();
+
+      /* ── Auto-fill passdown from orientation ── */
+      var pdOutgoingEdited = false;
+      var pdShiftEdited = false;
+
+      document.getElementById('pd-outgoing').addEventListener('input', function () {
+        pdOutgoingEdited = true;
+      });
+
+      document.getElementById('pd-shift').addEventListener('change', function () {
+        pdShiftEdited = true;
+      });
+
+      function syncFromOrientation() {
+        var ssName = val('ss-supervisor');
+        var ssShift = val('ss-shift');
+        var pdOutgoing = document.getElementById('pd-outgoing');
+        var pdShift = document.getElementById('pd-shift');
+
+        if (ssName && !pdOutgoingEdited) pdOutgoing.value = ssName;
+        if (ssShift && !pdShiftEdited) pdShift.value = ssShift;
+      }
+
+      document.getElementById('ss-supervisor').addEventListener('input', syncFromOrientation);
+      document.getElementById('ss-shift').addEventListener('change', syncFromOrientation);
+
+      var generateBtn = document.getElementById('generate-passdown');
+      var gateNote = document.getElementById('gate-note');
+
+      function updatePassdownGate() {
+        var isGreen = state.scorecard.status === 'green';
+        generateBtn.disabled = !isGreen;
+        gateNote.style.display = isGreen ? 'none' : 'block';
+      }
+
+      /* ── Repeat Failure Log ── */
+      var failureForm = document.getElementById('failure-form');
+      var failureError = document.getElementById('failure-error');
+      var repeatWarning = document.getElementById('repeat-warning');
+      var logContainer = document.getElementById('failure-log-entries');
+
+      function normalize(str) {
+        return str.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim();
+      }
+
+      function getKeywords(str) {
+        var stop = ['the','a','an','at','on','in','of','and','or','for','to','is','was','with'];
+        return normalize(str).split(/\s+/).filter(function (w) {
+          return w.length > 2 && stop.indexOf(w) === -1;
+        });
+      }
+
+      function isSimilarFailure(a, b) {
+        var kw1 = getKeywords(a), kw2 = getKeywords(b);
+        if (!kw1.length || !kw2.length) return false;
+        var matches = 0;
+        kw1.forEach(function (w) { if (kw2.indexOf(w) !== -1) matches++; });
+        return matches >= Math.ceil(Math.min(kw1.length, kw2.length) * 0.5);
+      }
+
+      function daysBetween(d1, d2) {
+        return Math.abs(new Date(d1) - new Date(d2)) / 86400000;
+      }
+
+      function checkRepeat(assetId, failure, date) {
+        var norm = normalize(assetId);
+        for (var i = 0; i < state.failureLog.length; i++) {
+          var e = state.failureLog[i];
+          if (normalize(e.assetId) !== norm) continue;
+          if (!isSimilarFailure(e.failure, failure)) continue;
+          if (daysBetween(e.date, date) <= 30) return e;
+        }
+        return null;
+      }
+
+      function renderLog() {
+        document.getElementById('failure-count').textContent = state.failureLog.length;
+        if (!state.failureLog.length) {
+          logContainer.innerHTML = '<p class="failure-log-empty">No repeat failures have been recorded during this shift.</p>';
+          return;
+        }
+        var html = '';
+        for (var i = state.failureLog.length - 1; i >= 0; i--) {
+          var e = state.failureLog[i];
+          html += '<div class="log-entry' + (e.isRepeat ? ' repeat-flag' : '') + '">';
+          html += '<div class="log-meta">' + escapeHtml(e.assetId) + ' · ' + escapeHtml(e.date) + '</div>';
+          html += '<div>' + escapeHtml(e.failure) + '</div>';
+          html += '<div style="color:var(--steel-dim);margin-top:2px;">' + escapeHtml(e.cause) + '</div>';
+          if (e.isRepeat) html += '<span class="log-flag">REPEAT FAILURE FLAGGED</span>';
+          html += '</div>';
+        }
+        logContainer.innerHTML = html;
+      }
+
+      failureForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var entry = {
+          assetId: val('rf-asset'),
+          failure: val('rf-failure'),
+          date: val('rf-date'),
+          cause: val('rf-cause')
+        };
+        if (!entry.assetId || !entry.failure || !entry.date || !entry.cause) {
+          failureError.classList.add('visible');
+          return;
+        }
+        failureError.classList.remove('visible');
+        var prior = checkRepeat(entry.assetId, entry.failure, entry.date);
+        entry.isRepeat = prior !== null;
+        repeatWarning.classList.toggle('visible', entry.isRepeat);
+        state.failureLog.push(entry);
+        failureForm.reset();
+        document.getElementById('rf-date').value = localDateString();
+        renderLog();
+      });
+
+      /* ── Generate Passdown ── */
+      var passdownOutput = document.getElementById('passdown-output');
+      var passdownActions = document.getElementById('passdown-actions');
+      var passdownError = document.getElementById('passdown-error');
+      var passdownPlainText = '';
+
+      function formatTime(t) {
+        if (!t) return '';
+        var parts = t.split(':');
+        var h = parseInt(parts[0], 10);
+        var ampm = h >= 12 ? 'PM' : 'AM';
+        h = h % 12 || 12;
+        return h + ':' + parts[1] + ' ' + ampm;
+      }
+
+      function formatDate(d) {
+        if (!d) return '';
+        var dt = new Date(d + 'T12:00:00');
+        return dt.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+      }
+
+      generateBtn.addEventListener('click', function () {
+        syncFromOrientation();
+
+        var outgoing = val('pd-outgoing') || val('ss-supervisor');
+        var shift = val('pd-shift') || val('ss-shift');
+
+        if (state.scorecard.status !== 'green') {
+          passdownError.textContent = 'The Handoff Readiness Scorecard must be complete before a passdown can be generated.';
+          passdownError.classList.add('visible');
+          passdownOutput.classList.remove('visible');
+          passdownActions.style.display = 'none';
+          return;
+        }
+
+        if (!outgoing || !shift) {
+          passdownError.textContent = 'Outgoing supervisor and shift are required. Complete Section 01 or enter values above.';
+          passdownError.classList.add('visible');
+          passdownOutput.classList.remove('visible');
+          passdownActions.style.display = 'none';
+          return;
+        }
+
+        if (!pdOutgoingEdited) document.getElementById('pd-outgoing').value = outgoing;
+        if (!pdShiftEdited && shift) document.getElementById('pd-shift').value = shift;
+
+        passdownError.classList.remove('visible');
+
+        var date = val('pd-date') || localDateString();
+        var time = val('pd-time');
+        var priorities = val('pd-priorities');
+        var safety = val('pd-safety');
+        var watch = val('pd-watch');
+
+        var meta = outgoing + ' · ' + shift + ' Shift · ' + formatDate(date);
+        if (time) meta += ' · End ' + formatTime(time);
+        document.getElementById('pd-meta').textContent = meta;
+
+        var body = '';
+        var plain = 'SHIFT PASSDOWN\n' + meta + '\n\n';
+
+        /* Priorities */
+        body += section('Top Priorities', priorities || null);
+        plain += 'TOP PRIORITIES\n' + (priorities || '(none entered)') + '\n\n';
+
+        /* Safety */
+        body += section('Active Isolations / Safety', safety || null);
+        plain += 'SAFETY / ISOLATIONS\n' + (safety || '(none entered)') + '\n\n';
+
+        /* Job plans */
+        body += '<div class="pd-section"><div class="pd-section-title">Shift-Resilient Job Plans (' + state.jobPlans.length + ')</div>';
+        plain += 'SHIFT-RESILIENT JOB PLANS (' + state.jobPlans.length + ')\n';
+        if (state.jobPlans.length) {
+          state.jobPlans.forEach(function (p) {
+            body += '<div class="pd-job"><div class="pd-job-title">' + escapeHtml(p.fault) + '</div>';
+            body += row('Parts and Tools', p.parts);
+            body += row('Safety', p.safety);
+            body += row('Completed', p.completed);
+            body += row('Next Step', p.next);
+            body += '</div>';
+            plain += '- ' + p.fault + '\n  Next: ' + p.next + '\n  Safety: ' + p.safety + '\n';
+          });
+        } else {
+          body += '<div class="pd-content pd-empty">No job plans have been recorded for this shift.</div>';
+          plain += '(none)\n';
+        }
+        body += '</div>\n';
+        plain += '\n';
+
+        /* Failures */
+        body += '<div class="pd-section"><div class="pd-section-title">Repeat Failure Log (' + state.failureLog.length + ')</div>';
+        plain += 'REPEAT FAILURE LOG (' + state.failureLog.length + ')\n';
+        if (state.failureLog.length) {
+          state.failureLog.forEach(function (f) {
+            body += '<div class="pd-job">';
+            body += '<div class="pd-job-title">' + escapeHtml(f.assetId) + ' — ' + escapeHtml(f.failure) + '</div>';
+            body += row('Date', f.date);
+            body += row('Cause and Corrective Action', f.cause);
+            if (f.isRepeat) body += '<span class="pd-flag repeat">REPEAT FAILURE</span>';
+            body += '</div>';
+            plain += '- ' + f.assetId + ': ' + f.failure + (f.isRepeat ? ' [REPEAT]' : '') + '\n';
+          });
+        } else {
+          body += '<div class="pd-content pd-empty">No repeat failures have been recorded during this shift.</div>';
+          plain += '(none)\n';
+        }
+        body += '</div>\n';
+        plain += '\n';
+
+        /* Scorecard */
+        var sc = state.scorecard;
+        var flagClass = sc.status === 'green' ? 'ready' : sc.status === 'yellow' ? 'warn' : 'repeat';
+        body += '<div class="pd-section"><div class="pd-section-title">Handoff Readiness</div>';
+        body += '<div class="pd-content">' + escapeHtml(sc.label) + ' — ' + escapeHtml(sc.text);
+        body += ' <span class="pd-flag ' + flagClass + '">' + sc.checked + '/6</span></div></div>';
+        plain += 'HANDOFF READINESS: ' + sc.label + ' (' + sc.checked + '/6)\n\n';
+
+        /* Watch list */
+        body += section('Watch List / Notes', watch || null);
+        plain += 'WATCH LIST\n' + (watch || '(none entered)') + '\n';
+
+        /* Orientation data if filled */
+        var orientShift = val('ss-shift');
+        var orientPriorities = val('ss-priorities');
+        var orientJobpacks = val('ss-jobpacks');
+        var orientChecks = document.querySelectorAll('.orient-check:checked').length;
+        if (orientShift || orientPriorities || orientJobpacks) {
+          var orientContent = '';
+          if (orientShift) orientContent += 'Shift: ' + orientShift + '\n';
+          if (orientPriorities) orientContent += 'Incoming priorities:\n' + orientPriorities + '\n';
+          if (orientJobpacks) orientContent += 'Open job packs:\n' + orientJobpacks + '\n';
+          if (orientChecks) orientContent += 'Orientation checklist: ' + orientChecks + '/5 complete';
+          body += section('Shift Orientation Notes', orientContent.trim());
+          plain += '\nSHIFT ORIENTATION\n' + orientContent;
+        }
+
+        document.getElementById('pd-body').innerHTML = body;
+        passdownPlainText = plain;
+        passdownOutput.classList.add('visible');
+        passdownActions.style.display = 'flex';
+        passdownOutput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+
+      function section(title, content) {
+        var html = '<div class="pd-section"><div class="pd-section-title">' + title + '</div>';
+        if (content) {
+          html += '<div class="pd-content">' + escapeHtml(content).replace(/\n/g, '<br>') + '</div>';
+        } else {
+          html += '<div class="pd-content pd-empty">None entered.</div>';
+        }
+        html += '</div>';
+        return html;
+      }
+
+      function row(label, value) {
+        return '<div class="pd-job-row"><strong>' + label + ':</strong> ' + escapeHtml(value) + '</div>';
+      }
+
+      document.getElementById('print-passdown').addEventListener('click', function () {
+        window.print();
+      });
+
+      document.getElementById('copy-passdown').addEventListener('click', function () {
+        if (!passdownPlainText) return;
+        var copySuccess = document.getElementById('copy-success');
+        var copyError = document.getElementById('copy-error');
+        copySuccess.classList.remove('visible');
+        copyError.classList.remove('visible');
+        navigator.clipboard.writeText(passdownPlainText).then(function () {
+          copySuccess.classList.add('visible');
+          setTimeout(function () { copySuccess.classList.remove('visible'); }, 2500);
+        }).catch(function () {
+          copyError.classList.add('visible');
+        });
+      });
+
+      /* ── Defaults ── */
+      var today = localDateString();
+      document.getElementById('rf-date').value = today;
+      document.getElementById('pd-date').value = today;
+      var now = new Date();
+      document.getElementById('pd-time').value =
+        String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+    })();
+  </script>
+</body>
+</html>
